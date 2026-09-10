@@ -4,9 +4,9 @@ export const site = {
   university: "Universidad de Cartagena",
   foundedYear: 1827,
   tagline:
-    "Desde el Claustro de San Agustín formamos abogados del Caribe: rigor, ética y servicio a Cartagena y a Colombia.",
+    "Pregrado en Derecho (SNIES 740, 160 créditos, presencial). Posgrados, consultorio jurídico gratuito y educación continua.",
   description:
-    "Sitio institucional de la Facultad de Derecho y Ciencias Políticas de la Universidad de Cartagena. Pregrado en Derecho, posgrados, consultorio jurídico y vida académica en el Caribe colombiano.",
+    "Facultad de Derecho y Ciencias Políticas de la Universidad de Cartagena. Pregrado en Derecho (SNIES 740), posgrados, consultorio jurídico gratuito y educación continua. Sede: Claustro de San Agustín, Centro Histórico.",
   url: "https://facultadbicentenaria.com",
   address: {
     venue: "Claustro de San Agustín",
@@ -186,7 +186,7 @@ export const diplomados = [
     title: "Diplomado en Derecho urbano",
     start: "Septiembre 2026",
     summary:
-      "Aproximación a los conceptos y dilemas del derecho urbanístico, el ordenamiento territorial y la ciudad caribeña.",
+      "Conceptos y dilemas del derecho urbanístico y el ordenamiento territorial.",
   },
   {
     slug: "derecho-corporativo",
@@ -200,7 +200,7 @@ export const diplomados = [
     title: "Diplomado en Gestión de riesgos y seguros",
     start: "Septiembre 2026",
     summary:
-      "Fundamentos de la gestión de riesgos, el contrato de seguro y su aplicación práctica en el entorno regional.",
+      "Fundamentos de la gestión de riesgos, el contrato de seguro y su aplicación práctica.",
   },
   {
     slug: "notariado-y-registro",

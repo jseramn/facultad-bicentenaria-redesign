@@ -117,7 +117,9 @@ export function SiteFooter() {
               Universidad de Cartagena · Facultad de Derecho y Ciencias Políticas.
               Sitio de información pública; no reemplaza actos administrativos.
             </p>
-            <p>Fundada en {site.foundedYear} · Caribe colombiano</p>
+            <p>
+              Fundada en {site.foundedYear} · {site.address.venue}, {site.address.city}
+            </p>
           </div>
         </div>
       </div>

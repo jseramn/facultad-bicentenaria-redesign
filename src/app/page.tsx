@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Container, SectionHeader, PhotoStrip } from "@/components/page-shell";
 import { Button } from "@/components/ui/button";
 import { events, monthShortFromKey, monthKey } from "@/content/events";
-import { diplomados, site } from "@/content/site";
+import { diplomados, pregrado, site } from "@/content/site";
 import { images } from "@/content/images";
 import { newsPosts } from "@/content/news";
 
@@ -22,7 +22,7 @@ const ofertaSecundaria = [
   {
     href: "/oferta/cursos-virtuales",
     title: "Cursos virtuales",
-    text: "Oferta corta a distancia. Cupos y valores: consultar con la Facultad.",
+    text: `Oferta corta a distancia. Cupos, calendario y valores: ${site.emails.facultad} o ${site.phones.switchboard}, ext. ${site.phones.facultyExt}.`,
   },
 ];
 
@@ -45,11 +45,11 @@ export default function HomePage() {
             {site.university} · desde {site.foundedYear}
           </p>
           <h1 className="mt-4 max-w-xl font-serif text-[clamp(1.65rem,0.72rem+4.1vw,3.75rem)] leading-[1.14] tracking-[-0.02em] text-pretty sm:mt-5 sm:max-w-3xl sm:text-5xl md:text-6xl">
-            Derecho del Caribe,
-            <span className="mt-1 block tracking-[-0.015em] text-gold-bright">
-              con casa en el Claustro
-            </span>
+            {site.faculty}
           </h1>
+          <p className="mt-3 max-w-xl font-serif text-base tracking-[-0.01em] text-pretty text-gold-bright sm:mt-4 sm:max-w-2xl sm:text-lg md:text-xl">
+            {site.university} · {site.address.venue}, {site.address.district}
+          </p>
           <p className="mt-4 max-w-xl text-base text-pretty text-primary-foreground/90 sm:mt-5 sm:text-lg">
             {site.tagline}
           </p>
@@ -118,12 +118,30 @@ export default function HomePage() {
                 id="oferta-titulo"
                 className="mt-3 font-serif text-3xl text-navy text-balance md:text-4xl"
               >
-                Formar juristas para Cartagena, el Caribe y el país
+                Pregrado, posgrados y educación continua
               </h2>
               <div className="gold-rule mt-4" />
               <p className="mt-5 text-sm leading-relaxed text-ink/85 md:text-base">
-                Pregrado con ficha MEN, posgrados publicados por la Universidad y
-                educación continua. Lo que no esté en ficha se consulta con la Facultad.
+                Pregrado en Derecho (SNIES {pregrado.snies}, {pregrado.credits}{" "}
+                créditos, {pregrado.modality.toLowerCase()}). Posgrados publicados
+                en la{" "}
+                <a
+                  href={site.official.posgrados}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-blue underline-offset-4 hover:underline"
+                >
+                  oferta oficial de la Universidad
+                </a>
+                . Diplomados con inicio previsto en septiembre de 2026. Datos que no
+                estén en ficha:{" "}
+                <a
+                  href={`mailto:${site.emails.facultad}`}
+                  className="font-medium text-blue underline-offset-4 hover:underline"
+                >
+                  {site.emails.facultad}
+                </a>{" "}
+                o {site.phones.switchboard}, ext. {site.phones.facultyExt}.
               </p>
             </div>
 
@@ -195,12 +213,13 @@ export default function HomePage() {
               Claustro de San Agustín
             </p>
             <h2 className="mt-3 font-serif text-3xl text-balance md:text-4xl">
-              Casa de la Facultad en el Centro Histórico
+              Fundada en {site.foundedYear} · sede en el Centro Histórico
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-primary-foreground/88 md:text-base">
-              Unidad académica fundacional de la Universidad de Cartagena. Entre
-              sus egresados documentados está Rafael Núñez. El currículo con énfasis
-              investigativo se consolida hacia 1990.
+              Unidad académica fundacional de la Universidad de Cartagena ({site.foundedYear}),
+              con sede en el Claustro de San Agustín. Entre sus egresados
+              documentados está Rafael Núñez. El currículo con énfasis investigativo
+              se consolida hacia 1990.
             </p>
             <Button
               asChild
@@ -220,9 +239,9 @@ export default function HomePage() {
           <div className="flex flex-col gap-4 border-b border-border pb-6 sm:flex-row sm:items-end sm:justify-between">
             <SectionHeader
               id="continua-titulo"
-              kicker="Formación avanzada"
+              kicker="Educación continua"
               title="Diplomados · septiembre 2026"
-              description="Educación continua anunciada. Inscripciones y valores se confirman con la Facultad."
+              description={`Diplomados anunciados para septiembre de 2026. Inscripciones y valores: ${site.emails.facultad} o ${site.phones.switchboard}, ext. ${site.phones.facultyExt}.`}
             />
             <Button asChild variant="outline" className="shrink-0 rounded-sm border-navy text-navy">
               <Link href="/oferta/educacion-continua">Ver todos</Link>
@@ -358,7 +377,14 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 text-pretty text-primary-foreground/90">
               No publicamos contadores en cero ni inventamos artículos. Grupos y
-              productos vigentes se consultan con la Facultad.
+              productos vigentes: Decanatura,{" "}
+              <a
+                href={`mailto:${site.emails.facultad}`}
+                className="underline-offset-4 hover:underline"
+              >
+                {site.emails.facultad}
+              </a>
+              .
             </p>
             <Button
               asChild
@@ -375,8 +401,8 @@ export default function HomePage() {
         <Container>
           <SectionHeader
             kicker="Comunidad"
-            title="Tres puertas de servicio"
-            description="Estudiantes, egresados y docentes. Ruta que sustituye el enlace vacío del sitio anterior."
+            title="Estudiantes, egresados y docentes"
+            description="Servicios e información para cada público. Contacto: Decanatura y canales en Comunidad."
           />
           <div className="mt-8 grid min-w-0 gap-px bg-border sm:grid-cols-3">
             {[
