@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useSyncExternalStore } from "react";
 import { Button } from "@/components/ui/button";
+import { useCookieConsent } from "@/components/cookie-consent-provider";
 import { site } from "@/content/site";
 
 function shouldShow(pathname: string) {
@@ -11,10 +13,21 @@ function shouldShow(pathname: string) {
   return false;
 }
 
+function useHasHydrated() {
+  return useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
+}
+
 export function MobileCtaBar() {
   const pathname = usePathname();
+  const hydrated = useHasHydrated();
+  const { consent } = useCookieConsent();
 
   if (!shouldShow(pathname)) return null;
+  if (!hydrated || !consent) return null;
 
   return (
     <>

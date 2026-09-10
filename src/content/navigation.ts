@@ -23,7 +23,6 @@ export const demoNav: NavItem[] = [
 export const utilityNav: NavItem[] = [
   { href: "https://unicartagena.edu.co", label: "Universidad de Cartagena" },
   { href: "https://unicartagena.edu.co/transparencia", label: "Transparencia" },
-  { href: "/accesibilidad", label: "Accesibilidad" },
   { href: "/contacto", label: "Contacto" },
 ];
 
@@ -44,15 +43,20 @@ export const footerNav = {
   ],
   servicio: [
     { href: "/contacto", label: "Contacto" },
-    { href: "/accesibilidad", label: "Declaración de accesibilidad" },
     { href: "/iniciar-sesion", label: "Iniciar sesión (demo)" },
     {
       href: "https://unicartagena.edu.co/proteccion-de-datos",
-      label: "Protección de datos",
+      label: "Protección de datos UdeC",
     },
+  ],
+  legal: [
+    { href: "/politica-de-privacidad", label: "Privacidad" },
+    { href: "/politica-de-cookies", label: "Cookies" },
+    { href: "/aviso-de-privacidad", label: "Aviso de privacidad" },
+    { href: "/accesibilidad", label: "Accesibilidad" },
     {
       href: "https://unicartagena.edu.co/transparencia",
-      label: "Portal de transparencia UdeC",
+      label: "Transparencia",
     },
   ],
 };
@@ -74,4 +78,7 @@ export const sitemapRoutes = [
   "/comunidad",
   "/accesibilidad",
   "/iniciar-sesion",
+  "/politica-de-privacidad",
+  "/politica-de-cookies",
+  "/aviso-de-privacidad",
 ] as const;

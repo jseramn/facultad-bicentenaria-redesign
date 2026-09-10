@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 export const metadata: Metadata = {
   title: "Accesibilidad",
   description:
-    "Declaración de accesibilidad WCAG 2.1 AA y uso de la barra de tamaño de texto y contraste de la Facultad Bicentenaria.",
+    "Declaración de accesibilidad WCAG 2.1 AA y uso del panel de tamaño de texto y contraste de la Facultad Bicentenaria.",
 };
 
 export default function AccesibilidadPage() {
@@ -45,26 +45,32 @@ export default function AccesibilidadPage() {
               <li>Regiones de encabezado, navegación, contenido principal y pie.</li>
               <li>Indicador de foco visible en enlaces, botones y campos.</li>
               <li>Textos alternativos en español para la fotografía de stock.</li>
-              <li>Barra de accesibilidad: tamaño de texto (A / A+ / A++) y contraste alto.</li>
+              <li>
+                Botón «Accesibilidad» que abre un cuadro de diálogo: tamaño de
+                texto (A / A+ / A++) y contraste alto, operable por teclado
+                (Escape para cerrar).
+              </li>
               <li>Respeto a «reducir movimiento» del sistema operativo.</li>
               <li>Mapa del sitio en <code className="text-navy">/sitemap.xml</code>.</li>
             </ul>
           </div>
           <div>
-            <h2 className="font-serif text-2xl text-navy">Cómo usar la barra</h2>
+            <h2 className="font-serif text-2xl text-navy">Cómo usar el panel</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              En la franja superior están los controles de tamaño de texto y
-              contraste. En pantallas pequeñas, los enlaces institucionales
-              (Universidad, Transparencia, Contacto) se agrupan en el menú, bajo
-              «Institucional», para no restar espacio al contenido.{" "}
+              En la franja superior, el botón{" "}
+              <strong className="text-navy">Accesibilidad</strong> abre un
+              cuadro de diálogo con los controles. En pantallas pequeñas, los
+              enlaces institucionales (Universidad, Transparencia, Contacto) se
+              agrupan en el menú, bajo «Institucional».{" "}
               <strong className="text-navy">A</strong> restablece el tamaño
               habitual; <strong className="text-navy">A+</strong> y{" "}
               <strong className="text-navy">A++</strong> aumentan el texto de toda la
-              interfaz. <strong className="text-navy">Contraste</strong> aplica un tema
-              de alto contraste (fondo blanco y texto negro).{" "}
+              interfaz. <strong className="text-navy">Contraste alto</strong> aplica un
+              tema de fondo blanco y texto negro.{" "}
               <strong className="text-navy">Restablecer</strong> vuelve a la
-              presentación por defecto. Las preferencias se guardan en este
-              navegador (almacenamiento local).
+              presentación por defecto. Cierre con Escape, el botón Cerrar o el
+              aspa. Las preferencias se guardan en este navegador
+              (almacenamiento local estrictamente necesario, no analítica).
             </p>
           </div>
           <div>
