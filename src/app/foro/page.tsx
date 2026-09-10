@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DemoNotice } from "@/components/demo-notice";
 import { PageHero, Container, SectionHeader, PhotoStrip } from "@/components/page-shell";
 import { Button } from "@/components/ui/button";
 import { forumThreads } from "@/content/forum";
@@ -15,9 +16,9 @@ export default function ForoPage() {
   return (
     <main id="contenido-principal">
       <PageHero
-        kicker="Comunidad académica"
+        kicker="Comunidad académica · demostración"
         title="Foro de la Facultad"
-        description="Espacio para orientar trámites, práctica y vida universitaria. Los hilos visibles son de demostración. El inicio de sesión no está ligado a un directorio real."
+        description="Espacio de muestra para orientar trámites, práctica y vida universitaria. Los hilos visibles no están ligados a un directorio real."
         image={images.lecture}
       />
 
@@ -35,6 +36,11 @@ export default function ForoPage() {
       </section>
       <section className="py-16 md:py-20">
         <Container>
+          <DemoNotice className="mb-10">
+            El foro académico es una demostración de interfaz: los hilos son de
+            muestra y no hay envío real de mensajes. Para trámites, escriba a la
+            Facultad o use los sistemas de la Universidad de Cartagena.
+          </DemoNotice>
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <SectionHeader
               kicker="Hilos abiertos (muestra)"

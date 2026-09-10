@@ -40,22 +40,24 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/35" />
         <div className="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-navy/90 via-navy/55 to-transparent md:w-3/4" />
-        <Container className="relative z-10 flex min-h-[min(78svh,42rem)] flex-col justify-end pb-12 pt-24 md:pb-16">
+        <Container className="relative z-10 flex min-h-[min(78svh,42rem)] flex-col justify-end pb-[max(5.5rem,env(safe-area-inset-bottom)+3.5rem)] pt-10 md:pb-16 md:pt-24">
           <p className="inline-flex w-fit items-center gap-2 border border-coral/60 bg-navy/40 px-3 py-1 text-[0.7rem] font-semibold tracking-[0.18em] text-gold-bright uppercase backdrop-blur-sm">
             {site.university} · desde {site.foundedYear}
           </p>
-          <h1 className="mt-5 max-w-3xl font-serif text-[2.35rem] leading-[1.08] text-balance sm:text-5xl md:text-6xl">
+          <h1 className="mt-4 max-w-xl font-serif text-[clamp(1.65rem,0.72rem+4.1vw,3.75rem)] leading-[1.14] tracking-[-0.02em] text-pretty sm:mt-5 sm:max-w-3xl sm:text-5xl md:text-6xl">
             Derecho del Caribe,
-            <span className="block text-gold-bright">con casa en el Claustro</span>
+            <span className="mt-1 block tracking-[-0.015em] text-gold-bright">
+              con casa en el Claustro
+            </span>
           </h1>
-          <p className="mt-5 max-w-xl text-base text-pretty text-primary-foreground/90 sm:text-lg">
+          <p className="mt-4 max-w-xl text-base text-pretty text-primary-foreground/90 sm:mt-5 sm:text-lg">
             {site.tagline}
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="mt-8 flex w-full max-w-md flex-col gap-4 sm:max-w-none sm:flex-row sm:flex-wrap sm:gap-3">
             <Button
               asChild
               size="lg"
-              className="h-11 rounded-sm bg-coral px-6 text-primary-foreground hover:bg-coral-deep"
+              className="h-12 w-full rounded-sm bg-coral px-6 text-base font-semibold text-primary-foreground shadow-[0_8px_20px_rgba(196,92,62,0.35)] hover:bg-coral-deep sm:h-11 sm:w-auto sm:text-sm"
             >
               <a
                 href={site.official.admissions}
@@ -69,7 +71,7 @@ export default function HomePage() {
               asChild
               size="lg"
               variant="outline"
-              className="h-11 rounded-sm border-white/45 bg-transparent px-6 text-white hover:bg-white/10 hover:text-white"
+              className="h-12 w-full rounded-sm border-white/55 bg-navy/25 px-6 text-base font-medium text-white hover:bg-white/10 hover:text-white sm:h-11 sm:w-auto sm:text-sm"
             >
               <Link href="/oferta/pregrado">Pregrado en Derecho</Link>
             </Button>
@@ -382,7 +384,7 @@ export default function HomePage() {
                 href: "/comunidad",
                 title: "Estudiantes",
                 image: images.afroStudent,
-                text: "Pregrado, consultorio y foro académico.",
+                text: "Pregrado, consultorio y foro de demostración.",
               },
               {
                 href: "/comunidad",

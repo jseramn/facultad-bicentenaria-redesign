@@ -53,8 +53,11 @@ export default function AccesibilidadPage() {
           <div>
             <h2 className="font-serif text-2xl text-navy">Cómo usar la barra</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              En la franja superior, junto a Transparencia y Contacto, están los
-              controles. <strong className="text-navy">A</strong> restablece el tamaño
+              En la franja superior están los controles de tamaño de texto y
+              contraste. En pantallas pequeñas, los enlaces institucionales
+              (Universidad, Transparencia, Contacto) se agrupan en el menú, bajo
+              «Institucional», para no restar espacio al contenido.{" "}
+              <strong className="text-navy">A</strong> restablece el tamaño
               habitual; <strong className="text-navy">A+</strong> y{" "}
               <strong className="text-navy">A++</strong> aumentan el texto de toda la
               interfaz. <strong className="text-navy">Contraste</strong> aplica un tema

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { DemoNotice } from "@/components/demo-notice";
 import { Container } from "@/components/page-shell";
 import { Button } from "@/components/ui/button";
 import { forumThreads, getThreadById } from "@/content/forum";
@@ -28,8 +29,12 @@ export default async function ForoThreadPage({ params }: Props) {
   return (
     <main id="contenido-principal" className="py-12 md:py-16">
       <Container className="max-w-3xl">
+        <DemoNotice className="mb-8">
+          Este hilo es de demostración. Las respuestas no se guardan en un
+          servidor: el foro institucional aún no tiene backend.
+        </DemoNotice>
         <p className="text-xs font-semibold tracking-[0.18em] text-blue uppercase">
-          Foro académico
+          Foro académico · demostración
         </p>
         <h1 className="mt-3 font-serif text-3xl text-navy md:text-4xl">
           {thread.title}
