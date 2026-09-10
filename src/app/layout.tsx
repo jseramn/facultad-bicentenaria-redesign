@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Newsreader, Source_Sans_3 } from "next/font/google";
 import { AccessibilityProvider } from "@/components/accessibility-provider";
+import { CookieConsentProvider } from "@/components/cookie-consent-provider";
+import { CookieConsentUi } from "@/components/cookie-consent-ui";
 import { MobileCtaBar } from "@/components/mobile-cta-bar";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -48,11 +50,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="flex min-h-full flex-col font-sans">
         <AccessibilityProvider>
-          <SkipLink />
-          <SiteHeader />
-          {children}
-          <SiteFooter />
-          <MobileCtaBar />
+          <CookieConsentProvider>
+            <SkipLink />
+            <SiteHeader />
+            {children}
+            <SiteFooter />
+            <CookieConsentUi />
+            <MobileCtaBar />
+          </CookieConsentProvider>
         </AccessibilityProvider>
       </body>
     </html>

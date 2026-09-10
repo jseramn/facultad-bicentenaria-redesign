@@ -94,12 +94,31 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-4 text-xs text-primary-foreground/65 sm:flex-row sm:justify-between">
-          <p>
-            Universidad de Cartagena · Facultad de Derecho y Ciencias Políticas.
-            Sitio de información pública; no reemplaza actos administrativos.
-          </p>
-          <p>Fundada en {site.foundedYear} · Caribe colombiano</p>
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 text-xs text-primary-foreground/65">
+          <nav aria-label="Información legal">
+            <ul className="flex flex-wrap gap-x-4 gap-y-2">
+              {footerNav.legal.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-primary-foreground/80 underline-offset-4 hover:text-white hover:underline"
+                    {...(item.href.startsWith("http")
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+          <div className="flex flex-col gap-2 sm:flex-row sm:justify-between">
+            <p>
+              Universidad de Cartagena · Facultad de Derecho y Ciencias Políticas.
+              Sitio de información pública; no reemplaza actos administrativos.
+            </p>
+            <p>Fundada en {site.foundedYear} · Caribe colombiano</p>
+          </div>
         </div>
       </div>
     </footer>

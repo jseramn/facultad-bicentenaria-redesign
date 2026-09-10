@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown, Menu } from "lucide-react";
 import { BrandMark } from "@/components/brand-mark";
-import { AccessibilityToolbar } from "@/components/accessibility-toolbar";
+import { AccessibilityDialog } from "@/components/accessibility-dialog";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -148,7 +148,7 @@ export function SiteHeader() {
                 ))}
               </ul>
             </nav>
-            <AccessibilityToolbar compact />
+            <AccessibilityDialog />
           </div>
         </div>
       </div>

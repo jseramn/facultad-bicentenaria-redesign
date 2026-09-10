@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { DataTreatmentConsent } from "@/components/data-treatment-consent";
 
 export function ContactForm() {
   const [sent, setSent] = useState(false);
@@ -75,10 +76,10 @@ export function ContactForm() {
           placeholder="Indique su consulta. No envíe datos sensibles de terceros ni expedientes completos por este canal."
         />
       </div>
+      <DataTreatmentConsent id="autorizacion-contacto" />
       <p className="text-xs text-muted-foreground">
-        Al enviar acepta que este demo no constituye petición oficial. Para
-        trámites con efectos administrativos use los canales de la Universidad de
-        Cartagena.
+        Este envío no constituye petición oficial. Para trámites con efectos
+        administrativos use los canales de la Universidad de Cartagena.
       </p>
       <Button
         type="submit"

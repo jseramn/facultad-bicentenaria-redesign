@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { DataTreatmentConsent } from "@/components/data-treatment-consent";
 
 export function LoginForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -53,6 +54,7 @@ export function LoginForm() {
           autoComplete="current-password"
         />
       </div>
+      <DataTreatmentConsent id="autorizacion-acceso" variant="login" />
       <Button
         type="submit"
         className="w-full bg-gold text-navy hover:bg-gold-bright"
