@@ -73,11 +73,23 @@ export default function OfertaPage() {
               La admisión la administra la Universidad de Cartagena. Esta sede
               digital orienta; no sustituye convocatorias ni derechos pecuniarios.
             </p>
-            <Button asChild className="shrink-0 bg-gold text-navy hover:bg-gold-bright">
-              <a href={site.official.admissions} target="_blank" rel="noopener noreferrer">
-                Admisiones 2027-1
-              </a>
-            </Button>
+            <div className="flex w-full min-w-0 shrink-0 flex-col gap-3 sm:w-auto sm:flex-row sm:gap-2">
+              <Button
+                asChild
+                className="h-11 rounded-sm bg-coral text-primary-foreground hover:bg-coral-deep sm:h-9"
+              >
+                <a href={site.official.admissions} target="_blank" rel="noopener noreferrer">
+                  Admisiones 2027-1
+                </a>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="h-11 rounded-sm border-navy text-navy sm:h-9"
+              >
+                <Link href="/oferta/pregrado">Pregrado en Derecho</Link>
+              </Button>
+            </div>
           </div>
           <div className="grid min-w-0 gap-5 md:grid-cols-2">
             {hubs.map((hub) => (

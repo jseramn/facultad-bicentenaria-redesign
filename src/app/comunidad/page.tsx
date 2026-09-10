@@ -20,7 +20,7 @@ const hubs = [
     links: [
       { href: "/oferta/pregrado", label: "Programa de Derecho" },
       { href: "/consultorio-juridico", label: "Consultorio jurídico" },
-      { href: "/foro", label: "Foro académico" },
+      { href: "/foro", label: "Foro académico (demostración)" },
     ],
   },
   {

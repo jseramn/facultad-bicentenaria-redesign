@@ -1,6 +1,7 @@
 export type NavItem = {
   href: string;
   label: string;
+  demo?: boolean;
 };
 
 export const primaryNav: NavItem[] = [
@@ -11,7 +12,12 @@ export const primaryNav: NavItem[] = [
   { href: "/investigacion", label: "Investigación" },
   { href: "/noticias", label: "Noticias" },
   { href: "/eventos", label: "Eventos" },
-  { href: "/foro", label: "Foro" },
+];
+
+/** Prototipos visibles; no forman parte de la navegación principal. */
+export const demoNav: NavItem[] = [
+  { href: "/foro", label: "Foro académico", demo: true },
+  { href: "/iniciar-sesion", label: "Iniciar sesión", demo: true },
 ];
 
 export const utilityNav: NavItem[] = [
@@ -32,7 +38,7 @@ export const footerNav = {
   comunidad: [
     { href: "/comunidad", label: "Estudiantes, egresados y docentes" },
     { href: "/consultorio-juridico", label: "Consultorio jurídico" },
-    { href: "/foro", label: "Foro académico" },
+    { href: "/foro", label: "Foro académico (demostración)" },
     { href: "/noticias", label: "Noticias" },
     { href: "/eventos", label: "Eventos" },
   ],

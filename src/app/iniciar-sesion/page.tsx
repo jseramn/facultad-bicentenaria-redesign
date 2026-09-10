@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { DemoNotice } from "@/components/demo-notice";
 import { LoginForm } from "@/components/login-form";
 import { Container } from "@/components/page-shell";
 
@@ -16,10 +17,10 @@ export default function LoginPage() {
           Acceso
         </p>
         <h1 className="mt-3 font-serif text-3xl text-navy">Iniciar sesión</h1>
-        <p className="mt-3 mb-8 text-sm text-muted-foreground">
-          Prototipo para el foro académico. No utilice la contraseña de su correo
-          institucional ni de los sistemas de notas.
-        </p>
+        <DemoNotice className="mt-5 mb-8">
+          No utilice la contraseña de su correo institucional ni de los sistemas de
+          notas. Este formulario no autentica contra ningún directorio real.
+        </DemoNotice>
         <div className="rounded-sm border border-border bg-card p-6">
           <LoginForm />
         </div>

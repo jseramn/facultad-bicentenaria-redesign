@@ -84,7 +84,7 @@ export default function InvestigacionPage() {
             <SectionHeader
               kicker="Para qué sirve esta página"
               title="Un mapa, no un tablero de métricas"
-              description="La investigación es función misional de la Facultad. Lo que falta es un inventario verificado de grupos. Hasta entonces, publicamos ejes, el canal de consulta y el criterio editorial."
+              description="La investigación es función misional de la Facultad. Lo que falta es un inventario verificado de grupos. Hasta entonces, publicamos ejes, el canal de consulta y el criterio editorial: consultar con la Facultad."
             />
             <ul className="mt-6 space-y-3 text-sm leading-relaxed text-ink/85">
               {pasos.map((paso) => (
@@ -93,6 +93,23 @@ export default function InvestigacionPage() {
                 </li>
               ))}
             </ul>
+            <div className="mt-8 rounded-sm border border-navy/15 bg-sand/70 p-5">
+              <p className="text-xs font-semibold tracking-[0.14em] text-coral uppercase">
+                Dato ausente a propósito
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-ink/85">
+                No hay aquí ranking Minciencias, recuento de artículos ni semilleros
+                con cupos. Si necesita el consolidado vigente, escríbanos: no
+                rellenamos el vacío con cifras.
+              </p>
+              <Button asChild className="mt-4 bg-navy text-primary-foreground hover:bg-navy-mid">
+                <a
+                  href={`mailto:${site.emails.facultad}?subject=Consulta%20investigacion%20Facultad%20de%20Derecho`}
+                >
+                  Consultar con la Facultad
+                </a>
+              </Button>
+            </div>
           </div>
           <div className="relative min-h-[260px] overflow-hidden rounded-xl">
             <Image
@@ -128,8 +145,8 @@ export default function InvestigacionPage() {
         <Container>
           <SectionHeader
             kicker="Grupos y semilleros"
-            title="Placeholders honestos"
-            description="Ninguna de estas fichas afirma clasificación, número de integrantes ni producción anual."
+            title="Lo que debe consultarse"
+            description="Ninguna de estas fichas afirma clasificación, número de integrantes ni producción anual. El canal de consulta es la Facultad."
           />
           <div className="mt-8 grid min-w-0 gap-5 lg:grid-cols-3">
             {grupos.map((grupo) => (
